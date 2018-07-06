@@ -116,6 +116,7 @@ nav h1 a {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  box-sizing: border-box;
 }
 .filter-options h2 {
   color: white;
