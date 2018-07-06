@@ -54,9 +54,11 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+  display: flex;
 }
 nav h1 {
   margin: auto;
+  align-items: center;
 }
 nav h1 a {
   color: #fff;
@@ -71,7 +73,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%;
 }
 
 /* Display list items side by side */
