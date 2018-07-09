@@ -204,18 +204,26 @@ nav h1 a {
   width: 100%;
   z-index: 1000;
 }
+
+#maincontent {
+	margin-top: 131px;
+}
+
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
+  height: 400px;
+  /* height: 87%; */
+  /* position: fixed; */
+  /* right: 0; */
+  /* top: 80px; */
+  /* width: 50%; */
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
+  z-index: 0;
 }
 .inside #footer {
   bottom: 0;
