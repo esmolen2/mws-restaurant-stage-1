@@ -336,3 +336,9 @@ nav h1 a {
 /* #restaurant-hours td {
   color: #666;
 } */
+
+@media (min-width: 768px) {
+	.filter-options h2 {
+	  width: auto;
+	}
+}
