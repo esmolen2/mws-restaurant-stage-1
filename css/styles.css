@@ -75,6 +75,7 @@ nav h1 a {
     font-size: 17px;
     margin: 0;
     width: 100%;
+	box-sizing: border-box;
 }
 
 /* Display list items side by side */
@@ -219,7 +220,8 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
+  box-sizing: border-box;
 }
 #restaurant-name {
   color: #f18200;
