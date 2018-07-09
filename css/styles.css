@@ -161,6 +161,7 @@ nav h1 a {
   padding: 30px;
   text-align: left;
   width: 270px;
+  border-radius: 8px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -169,6 +170,7 @@ nav h1 a {
   max-width: 100%;
   /* min-height: 248px; */
   min-width: 100%;
+  border-radius: 3px;
 }
 #restaurants-list li h1 {
   color: orange;
@@ -195,6 +197,7 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 3px;
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -243,6 +246,7 @@ nav h1 a {
 }
 #restaurant-img {
 	width: 100%;
+	border-radius: 3px;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -259,6 +263,7 @@ nav h1 a {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+  border-radius: 3px;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
