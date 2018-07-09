@@ -298,8 +298,8 @@ nav h1 a {
   /* padding: 20px; */
   padding-bottom: 20px;
   position: relative;
-  /* width: 85%; */
-  width: 290px;
+  width: 100%;
+  /* width: 290px; */
   border-radius: 8px;
 }
 #reviews-list div {
@@ -340,5 +340,16 @@ nav h1 a {
 @media (min-width: 768px) {
 	.filter-options h2 {
 	  width: auto;
+	}
+
+	#reviews-list li {
+		width: 45%;
+		margin: 0 15px 30px;
+	}
+}
+
+@media (min-width: 1024px) {
+	#reviews-list li {
+		max-width: 400px;
 	}
 }
