@@ -148,11 +148,11 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  * Create review HTML and add it to the webpage.
  */
 createReviewHTML = (review) => {
-  const li = document.createElement('li');
+  const li = document.createElement('li');			// May want to define further for accessibility
   const heading = document.createElement('div');
   heading.classList.add('review-heading');
 
-  const name = document.createElement('p');
+  const name = document.createElement('h3');
   name.innerHTML = review.name;
   name.classList.add('review-name');
   heading.appendChild(name);
