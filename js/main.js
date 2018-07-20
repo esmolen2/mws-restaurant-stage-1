@@ -36,6 +36,8 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
+	option.setAttribute("aria-setsize", neighborhoods.length + 1);
+	option.setAttribute("aria-posinset", neighborhoods.indexOf(neighborhood) + 2);
     select.append(option);
   });
 }
@@ -64,6 +66,8 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+	option.setAttribute("aria-setsize", cuisines.length + 1);
+	option.setAttribute("aria-posinset", cuisines.indexOf(cuisine) + 2);
     select.append(option);
   });
 }
