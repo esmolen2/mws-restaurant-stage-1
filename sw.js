@@ -39,13 +39,9 @@ const initialCacheUrls = [
 	`https://api.tiles.mapbox.com/v4/mapbox.streets/12/1208/1540.jpg70?access_token=${accessToken}`
 ];
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', event =>
 	event.waitUntil(
 		caches.open('restaurant-reviews')
-		.then(function(cache) {
-			return cache.addAll(
-				initialCacheUrls
-			);
-		})
-	);
-});
+		.then(cache => cache.addAll(initialCacheUrls))
+	)
+);
