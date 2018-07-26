@@ -3,6 +3,7 @@ const accessToken = 'pk.eyJ1IjoiZXNtb2xlbjIiLCJhIjoiY2pqOThtYzh3MTV5djNwbzU3ZG14
 const initialCacheUrls = [
 	// Local skeleton, images, and restaurant data
 	'/',
+	'error.html',
 	'css/styles.css',
 	'data/restaurants.json',
 	'img/1.jpg',
@@ -39,9 +40,32 @@ const initialCacheUrls = [
 	`https://api.tiles.mapbox.com/v4/mapbox.streets/12/1208/1540.jpg70?access_token=${accessToken}`
 ];
 
-self.addEventListener('install', event =>
+self.addEventListener('install', event => {
 	event.waitUntil(
 		caches.open('restaurant-reviews')
 		.then(cache => cache.addAll(initialCacheUrls))
 	)
-);
+});
+
+// Derived from MDN documentation on cache.put() and caches.match()
+// and from associated MDN service worker example https://mdn.github.io/sw-test/
+self.addEventListener('fetch', event => {
+	event.respondWith(
+		caches.match(event.request)
+	  	.then(function(response) {
+		    if (response !== undefined) {
+		      return response;
+		    } else {
+		      return fetch(event.request).then(response => {
+		        let responseClone = response.clone();
+		        caches.open('restaurant-reviews').then(cache => {
+		          cache.put(event.request, responseClone);
+		        });
+		        return response;
+		      }).catch(function () {
+		        return caches.match('error.html');
+		      });
+		    }
+	  	})
+	)
+});
